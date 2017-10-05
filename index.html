@@ -1,2 +1,127 @@
-test
-ddd
+<!DOCTYPE html>
+<html>
+<head>
+  <title>words to my cat</title>
+  <style type="text/css">
+    /*typed.js*/
+    .typed-cursor{
+      opacity: 1;
+      animation: typedjsBlink 0.7s infinite;
+      -webkit-animation: typedjsBlink 0.7s infinite;
+              animation: typedjsBlink 0.7s infinite;
+    }
+
+    @keyframes typedjsBlink{
+      50% { opacity: 0.0; }
+    }
+
+    @-webkit-keyframes typedjsBlink{
+      0% { opacity: 1; }
+      50% { opacity: 0.0; }
+      100% { opacity: 1; }
+    }
+  
+    .typed-fade-out{
+      opacity: 0;
+      transition: opacity .25s;
+      -webkit-animation: 0;
+              animation: 0;
+    }
+
+    /*dom*/
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: url(bg.jpg);
+      background-size: cover;
+      background-position: 0;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .wrapper {
+      height: 120px;
+      line-height: 120px;
+      width: 850px;
+      font-size: 50px;
+      background: rgba(255, 255, 255, .7);
+      border-radius: 50px;
+      /*color: rgba(255, 255, 255, 1)*/
+      color: #a300ff;
+      font-weight: 500;
+    }
+
+    .wrapper > .element {
+      padding-left: 50px;
+    }
+
+    #typed-string {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <span class="element"></span>
+</div>
+<div id="typed-strings">
+  <p>^5000如果我们不曾相遇</p>
+  <p>我会是在哪里？^5000</p>
+  <p>时光荏苒^500 岁月如梭</p>
+  <p>一眨眼^500 我们已经在一起三年有余</p>
+  <p>对于年轻人来说</p>
+  <p>三年五年也许就是一生一世</p>
+  <p>而对于我而言</p>
+  <p>希望来生来世^500 都是和你一起度过</p>
+  <p>曾经的誓言^500 我都不会忘记</p>
+  <p>天真岁月不忍欺</p>
+  <p>青春荒唐我不负你</p>
+  <p>今天^500 我向你承诺</p>
+  <p>从今以后</p>
+  <p>我们只有死别</p>
+  <p>再无生离</p>
+  <p>我会照顾你</p>
+  <p>不会对你发脾气</p>
+  <p>包容你的缺点和坏脾气</p>
+  <p>亲爱的</p>
+  <p>最美的不是下雨天</p>
+  <p>是曾与你躲过雨的屋檐</p>
+  <p>还记得周杰伦演唱会前</p>
+  <p>突然的大雨吗？^1000</p>
+  <p>爱一个人希望她过更好</p>
+  <p>打从心里暖暖的</p>
+  <p>你比自己更重要</p>
+  <p>还记得在梁静茹演唱会上</p>
+  <p>我在你耳边唱给你听的歌曲吗？^1000</p>
+  <p>苍狗又白云 身旁有了你</p>
+  <p>匆匆轮回又有何惧？</p>
+  <p>^2000我们结婚吧</p>
+  <p>让我们的故事继续^3000</p>
+  <p>倩慧，^500嫁给我，^1000好吗？</p>
+</div>
+<audio autoplay="autoplay" src="ifwehavenevermet.mp3">
+您的浏览器不支持 audio 标签。
+</audio>
+<script src="//cdn.bootcss.com/typed.js/2.0.6/typed.min.js"></script>
+<script>
+  var typed = new Typed('.element', {
+    stringsElement: '#typed-strings',
+    typeSpeed: 200,
+    backSpeed: 0,
+    backDelay: 1000,
+    startDelay: 0,
+    showCursor: true,
+    fadeOut: true,
+    fadeOutClass: 'typed-fade-out',
+    // cursorChar: '|',
+    // autoInsertCss: true,
+  });
+</script>
+</body>
+</html>
