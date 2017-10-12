@@ -2,11 +2,11 @@
 <html>
 <head>
   <title>如果我们不曾相遇</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
   <style type="text/css">
     /*typed.js*/
     .typed-cursor{
       opacity: 1;
-      animation: typedjsBlink 0.7s infinite;
       -webkit-animation: typedjsBlink 0.7s infinite;
               animation: typedjsBlink 0.7s infinite;
     }
@@ -35,21 +35,19 @@
     }
 
     body {
-      background: url(image/bg.jpg);
-      background-size: cover;
-      background-position: 0;
       height: 100vh;
       width: 100vw;
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
     }
 
     .wrapper {
-      height: 120px;
-      line-height: 120px;
-      width: 850px;
-      font-size: 50px;
+      height: 40px;
+      line-height: 40px;
+      width: 90%;
+      font-size: 18px;
       background: rgba(255, 255, 255, .7);
       border-radius: 50px;
       color: #a300ff;
@@ -57,14 +55,47 @@
     }
 
     .wrapper > .element {
-      padding-left: 50px;
+      padding-left: 30px;
+    }
+
+    /*bg*/
+    .img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: opacity 5s;
+    }
+
+    .z-index-1 {
+      z-index: -99;
+    }
+
+    .z-index-2 {
+      z-index: -100;
+    }
+
+    .z-index-3 {
+      z-index: -101;
+    }
+
+    .z-index-4 {
+      z-index: -102;
+    }
+
+    .hide {
+      opacity: 0;
     }
   </style>
 </head>
 <body>
+<img class="z-index-1 img" src="image/bg.jpg" />
+<img class="z-index-2 img" src="image/3.jpg" />
+<img class="z-index-3 img" src="image/2.jpg" />
+<img class="z-index-4 img" src="image/1.jpg" />
 <div class="wrapper">
   <span class="element"></span>
 </div>
+<!-- <img src="image/1.jpg" /> -->
 <audio autoplay="autoplay" src="music/ifwehavenevermet.mp3">
   您的浏览器不支持 audio 标签。
 </audio>
@@ -79,7 +110,7 @@
     "三年五年也许就是一生一世",
     "而对于我而言",
     "希望来生来世 ^500都是和你一起度过",
-    "曾经的誓言 ^500我都不会忘记",
+    "^2000曾经的誓言 ^500我都不会忘记",
     "天真岁月不忍欺",
     "青春荒唐我不负你",
     "如今 ^500我做到了",
@@ -87,16 +118,13 @@
     "从今以后",
     "我们只有死别",
     "^500我们再无生离",
-    "我会照顾你",
+    "^2000我会照顾你",
     "不会对你发脾气",
     "包容你的缺点和坏脾气",
+    "^1000这世间",
+    "唯有好女孩和梦想不可辜负",
     "^1000我决定彻底插手你的人生",
     "和你一起爱你的爸爸妈妈",
-    "^1000爱一个人 ^500希望她过更好",
-    "打从心里暖暖的",
-    "你比自己更重要",
-    "还记得在梁静茹演唱会上",
-    "我在你耳边唱给你听的吗？",
     "^1000苍狗又白云 ^500身旁有了你",
     "匆匆轮回又有何惧？",
     "^2000亲爱的",
@@ -118,6 +146,20 @@
     // cursorChar: '|',
     // autoInsertCss: true,
   });
+
+
+  // change bg
+  setTimeout(() => {
+    document.querySelector('.z-index-1').classList.add('hide')
+  }, 1000 * 40) // 43
+
+  setTimeout(() => {
+    document.querySelector('.z-index-2').classList.add('hide')
+  }, 1000 * 73) // 76
+
+  setTimeout(() => {
+    document.querySelector('.z-index-3').classList.add('hide')
+  }, 1000 * 115)
 </script>
 </body>
 </html>
