@@ -85,6 +85,19 @@
     .hide {
       opacity: 0;
     }
+
+    /* 兼容 PC */
+    @media (min-width: 768px) {
+      .wrapper {
+        height: 60px;
+        line-height: 60px;
+        font-size: 28px;
+      }
+
+      .wrapper > .element {
+        padding-left: 400px;
+      }
+    } 
   </style>
 </head>
 <body>
