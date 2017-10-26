@@ -108,12 +108,35 @@
 <div class="wrapper">
   <span class="element"></span>
 </div>
-<!-- <img src="image/1.jpg" /> -->
-<audio autoplay="autoplay" src="music/ifwehavenevermet.mp3">
-  您的浏览器不支持 audio 标签。
+
+<audio controls="controls" style="display: none">
+  <source src="music/ifwehavenevermet.mp3" type="audio/mp3" />
+  <embed src="music/ifwehavenevermet.mp3" />
 </audio>
+
 <script src="//cdn.bootcss.com/typed.js/2.0.6/typed.min.js"></script>
+
+<!-- 解决 audio 标签在 ios 下无法自动播放的问题 -->
+<script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script>
+  function autoPlayAudio() {
+    wx.config({
+      // 配置信息, 即使不正确也能使用 wx.ready
+      debug: false,
+      appId: '',
+      timestamp: 1,
+      nonceStr: '',
+      signature: '',
+      jsApiList: []
+    });
+
+    wx.ready(function() {
+      document.querySelector('audio').play() 
+    });
+  }
+
+  autoPlayAudio()
+    
   var strings = [
     "如果我们不曾相遇",
     "我会是在哪里？",
